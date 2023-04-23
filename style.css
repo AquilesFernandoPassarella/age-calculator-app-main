@@ -1,0 +1,43 @@
+
+
+
+body{
+    background-color: hsl(0, 0%, 94%);
+}
+
+.container{
+    margin: 100px auto;
+    width: 800px;
+    height: 500px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.inputs{
+    display: flex;
+    gap: 25px;
+    width: 50%;
+}
+
+.result{
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 25px;
+    width: 50%;
+}
+
+.image{
+    text-align: center;
+    display: flex;
+    margin-left: 40px;
+    width: 65px;
+    height: 65px;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+}
+
+img{
+    width: 32px;
+    margin: auto; 
+}
