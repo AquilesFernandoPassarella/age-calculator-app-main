@@ -7,13 +7,14 @@
   --Smokey-grey: hsl(0, 1%, 44%);
   --off-black: hsl(0, 0%, 8%);
   --fonte: 'Poppins', sans-serif;
+  --cor-red: #e63636;
 }
 
 body {
   background-color: var(--off-white);
 }
 
-.container {
+.form__container {
   border-top-left-radius: 20px ;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -34,59 +35,49 @@ label{
 #day,
 #month,
 #year {
+  font-size: 18px;
+  font-family: var(--fonte);
+  color: var(--off-black);
   margin-top: 4px;
   width: 3em;
-  padding: 1em;
-  border-radius: 10px;
+  padding: 0.5em;
+  border-radius: 7px;
   border: solid var(--ligth-grey) 1px;
 }
-
-.inputs {
+#year::placeholder{
+  font-family: var(--fonte);
+ 
+}
+#month::placeholder{
+  font-family: var(--fonte);
   
+}
+#day::placeholder{
+  font-family: var(--fonte);
+  
+}
+.inputs {
+  width: 15em;
+  margin: 0 auto;
   display: flex;
   gap: 1em;
+  
+  
 }
-
-.result {
+.mensagem-erro{
+  
+  font-size: 12px;
+  color: var(--cor-red) ;
+}
+.resultados {
   display: flex;
   flex-direction: column;
   font-size: 45px;
   margin: 0 auto;
   gap: 10px;
-  width: 80%;
+  width:6em;
   font-family: var(--fonte);
 }
-
-.image {
-  text-align: center;
-  display: flex;
-  margin-left: 40px;
-  margin-top: 10px;
-  width: 65px;
-  height: 65px;
-  background-color: hsl(259, 100%, 65%);
-  border-radius: 50%;
-}
-
-img {
-  width: 32px;
-  margin: auto;
-}
-
-
-.button{
-    display: flex;
-    height: 1px;
-}
-
-
-.linha{
-    margin-top: 40px;
-    width: 200px;
-    border: solid var(--ligth-grey) 0.1px;
-}
-
-
 
 .btn-submit {
   border: none;
@@ -95,9 +86,10 @@ img {
   padding: 24px;
   position: absolute;
   right: 0px;
+  cursor: pointer;
 }
 
-.btn-submit:hover {
+.btn-submit:active {
   background-color: black;
 }
 
@@ -125,15 +117,8 @@ span{
   color: var(--purple);
 }
 
-@media only screen and (max-width: 500px) {
 
-  
- 
-  .inputs{
-    
-    width: 15em;
-    margin: 0 auto;
-  }
+
   .btn-submit {
     width: 64px;
     height: 64px;
@@ -141,6 +126,7 @@ span{
     margin: 0px;
     top: 18px;
     right: 40%;
+    cursor: pointer;
 }
   .btn-submit-icon {
     width: 26px;
@@ -156,4 +142,4 @@ span{
   margin: 15px 0px 22px;
 }
 
-}
+

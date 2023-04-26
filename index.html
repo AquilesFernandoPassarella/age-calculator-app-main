@@ -10,8 +10,9 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/media-desktop.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,11 +24,12 @@
   </head>
   <body>
     <header>
-      <div class="container">
+      <div class="form__container">
         <section class="inputs">
           <div class="position">
             <label>DAY <br /> </label>
             <input
+            required
               name="Day"
               type="text"
               placeholder="DD"
@@ -35,11 +37,15 @@
               minlength="2"
               maxlength="2"
             />
+            <span class="mensagem-erro"
+              ></span
+            >
           </div>
 
           <div class="position">
             <label>MONTH <br /> </label>
             <input
+            required
               name="Month"
               type="text"
               placeholder="MM"
@@ -47,11 +53,13 @@
               minlength="2"
               maxlength="2"
             />
+            <span class="mensagem-erro"></span>
           </div>
 
           <div class="position">
             <label for="">YEAR</label><br />
             <input
+            required
               name="Year"
               type="text"
               placeholder="YYYY"
@@ -59,6 +67,9 @@
               minlength="4"
               maxlength="4"
             />
+            <span class="mensagem-erro"
+              ></span
+            >
           </div>
         </section>
 
@@ -73,10 +84,10 @@
           </button>
         </div>
 
-        <section class="result">
-          <p><span> -- </span> years</p>
-          <p><span> -- </span> months</p>
-          <p><span> -- </span> days</p>
+        <section class="resultados">
+          <p><span class="year"> -- </span> years</p>
+          <p><span class="month"> -- </span> months</p>
+          <p><span class="day"> -- </span> days</p>
         </section>
       </div>
     </header>
