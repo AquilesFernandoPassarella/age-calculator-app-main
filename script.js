@@ -6,13 +6,15 @@ const outDay = document.querySelector('.day');
 const outMonth = document.querySelector('.month');
 const outYear = document.querySelector('.year');
 
-const btn = document.querySelector('btn-submit')
+const btn = document.querySelector('btn-submit');
+const data = new Date();
+
 
 
 btn.addEventListener("click", function(){
 
-    outYear.innerHTML = year.value - 2023;
-
+    outYear.innerHTML = year.value - data;
+    console.log(outYear);
 })
 
 
